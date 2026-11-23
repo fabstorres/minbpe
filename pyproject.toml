@@ -1,0 +1,15 @@
+[project]
+name = "minbpe"
+version = "0.1.0"
+description = "Minimal, clean code for the Byte Pair Encoding (BPE) algorithm commonly used in LLM tokenization."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "regex",
+    "tiktoken",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
