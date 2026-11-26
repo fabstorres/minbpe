@@ -27,7 +27,7 @@ class BasicTokenizer(Tokenizer):
         while len(tokens) >= 2:
             pairs = get_stats(tokens)
             pair = min(pairs, key=lambda p: self.merges.get(p, float("inf")))
-            if pair not in pairs:
+            if pair not in self.merges:
                 break
             id = self.merges[pair]
             tokens = merge(tokens, pair, id)
